@@ -1923,7 +1923,6 @@ h2 {
   }
   .cvi-breadcrumbs__item:not(.cvi-breadcrumbs__item:nth-last-child(2)) .cvi-breadcrumbs__item-link {
     display: none;
-    content: "";
   }
 }
 
@@ -2311,10 +2310,6 @@ h2 {
     grid-template-rows: repeat(var(--rows), min-content);
     grid-auto-flow: column;
   }
-}
-
-.cvi-feedback__icon-svg {
-  height: 21px;
 }
 
 .cvi-character-counter {
