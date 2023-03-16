@@ -1029,6 +1029,7 @@ h2 {
   fill: var(--cvi-color-sapphire-blue-10);
   text-decoration: underline;
   border: var(--cvi-border-width) solid transparent;
+  border-radius: var(--cvi-radius-xs);
 }
 
 .cvi-button--appearance-text .cvi-button__button:hover {
@@ -1037,7 +1038,6 @@ h2 {
 
 .cvi-button--appearance-text .cvi-button__button:focus {
   border: var(--cvi-border-width) solid var(--cvi-color-sapphire-blue-10);
-  border-radius: var(--cvi-radius-xs);
 }
 
 .cvi-button--appearance-text .cvi-button__button:disabled {
