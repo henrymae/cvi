@@ -1120,6 +1120,92 @@ h2 {
   pointer-events: none;
 }
 
+.cvi-textfield-with-cdk {
+  --comment: "A form text control with Angular Material CDK autosize styles";
+  --comment: "A form text control";
+  display: block;
+}
+
+.cvi-textfield-with-cdk--type-single-line .cvi-textfield-with-cdk__text-control {
+  min-width: var(--cvi-textfield--single-line--min-width, 200px);
+  max-width: var(--cvi-textfield--single-line--max-width, 300px);
+  width: 100%;
+  height: 40px;
+}
+
+.cvi-textfield-with-cdk--type-multiple-lines {
+  display: flex;
+  flex-direction: column;
+}
+
+.cvi-textfield-with-cdk--type-multiple-lines .cvi-textfield-with-cdk__text-control {
+  width: 100%;
+  min-width: 200px;
+  max-width: var(--cvi-textfield--multiple-lines--max-width, 670px);
+  padding: var(--cvi-spacing-paldiski);
+  resize: vertical;
+}
+
+.cvi-textfield-with-cdk--has-suffix-icon {
+  position: relative;
+}
+
+.cvi-textfield-with-cdk--has-suffix-icon .cvi-textfield-with-cdk__text-control {
+  padding-inline-end: calc(var(--cvi-spacing-elva) * 2 + 16px);
+}
+
+.cvi-textfield-with-cdk__text-control {
+  background-color: var(--cvi-color-white);
+  border: 1px solid var(--cvi-color-black-coral-5);
+  border-radius: var(--cvi-radius-s);
+  font-size: var(--cvi-font-size-100);
+  padding-inline-start: var(--cvi-spacing-paldiski);
+}
+
+.cvi-textfield-with-cdk__text-control:focus {
+  outline: 2px solid var(--cvi-color-sapphire-blue-10);
+  border-color: transparent;
+}
+
+.cvi-textfield-with-cdk--is-disabled .cvi-textfield-with-cdk__text-control {
+  background-color: var(--cvi-color-black-coral-0);
+  border: 1px solid var(--cvi-color-black-coral-5);
+}
+
+.cvi-textfield-with-cdk--no-resize .cvi-textfield-with-cdk__text-control {
+  resize: none;
+}
+
+.cvi-textfield-with-cdk__suffix-icon-wrapper {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  padding-inline-end: var(--cvi-spacing-elva);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  fill: var(--cvi-color-sapphire-blue-10);
+  pointer-events: none;
+}
+
+.cvi-textfield-with-cdk textarea.cdk-textarea-autosize {
+  resize: none;
+}
+
+.cvi-textfield-with-cdk textarea.cdk-textarea-autosize-measuring {
+  padding: 2px 0 !important;
+  box-sizing: content-box !important;
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+.cvi-textfield-with-cdk textarea.cdk-textarea-autosize-measuring-firefox {
+  padding: 2px 0 !important;
+  box-sizing: content-box !important;
+  height: 0 !important;
+}
+
 .cvi-form-item {
   --comment: "A wrapper for a form field";
   display: flex;
