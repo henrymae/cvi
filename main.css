@@ -257,6 +257,7 @@
   --cvi-color-rgb-white: 255 255 255;
   --cvi-color-rgb-black: 0 0 0;
   --cvi-color-rgb-extra-light: 249 249 249;
+  --cvi-color-focus: var(--cvi-color-sapphire-blue-10);
 }
 
 /* stylelint-disable-next-line value-keyword-case */
@@ -541,6 +542,7 @@
   --cvi-color-rgb-white: 255 255 255;
   --cvi-color-rgb-black: 0 0 0;
   --cvi-color-rgb-extra-light: 249 249 249;
+  --cvi-color-focus: var(--cvi-color-sapphire-blue-10);
 }
 
 /* stylelint-disable-next-line value-keyword-case */
@@ -602,6 +604,10 @@
   --cvi-shadow-delta: inset 1px 0 0 var(--cvi-color-white),
     inset -1px 0 0 var(--cvi-color-white), inset 0 1px 0 var(--cvi-color-white),
     inset 0 -1px 0 var(--cvi-color-white);
+}
+
+:root {
+  --cvi-border-focus: var(--cvi-border-width) solid var(--cvi-color-focus);
   --cvi-shadow-focus: var(--cvi-shadow-delta);
 }
 
@@ -618,6 +624,11 @@
   padding: 0;
   border: none;
   white-space: nowrap;
+}
+
+.cvi-hidden {
+  /* stylelint-disable-next-line declaration-no-important */
+  display: none !important;
 }
 
 html,
@@ -961,6 +972,291 @@ h2 {
   margin-bottom: var(--cvi-spacing-elva);
 }
 
+:root {
+  --cvi-color-black-coral-0: #f0f0f2;
+  --cvi-color-black-coral-1: #e1e2e5;
+  --cvi-color-black-coral-2: #d2d3d8;
+  --cvi-color-black-coral-3: #c4c5cb;
+  --cvi-color-black-coral-4: #b5b6be;
+  --cvi-color-black-coral-5: #a6a8b1;
+  --cvi-color-black-coral-6: #9799a4;
+  --cvi-color-black-coral-7: #898b97;
+  --cvi-color-black-coral-8: #7a7c8a;
+  --cvi-color-black-coral-9: #6b6e7d;
+  --cvi-color-black-coral-10: #5d6071;
+  --cvi-color-black-coral-11: #555867;
+  --cvi-color-black-coral-12: #4d4f5d;
+  --cvi-color-black-coral-13: #444653;
+  --cvi-color-black-coral-14: #3c3e48;
+  --cvi-color-black-coral-15: #33353e;
+  --cvi-color-black-coral-16: #2b2c34;
+  --cvi-color-black-coral-17: #22232a;
+  --cvi-color-black-coral-18: #1a1b1f;
+  --cvi-color-black-coral-19: #111215;
+  --cvi-color-black-coral-20: #09090b;
+  --cvi-color-dark-tangerine-0: #fff8e9;
+  --cvi-color-dark-tangerine-1: #fff1d3;
+  --cvi-color-dark-tangerine-2: #ffeabe;
+  --cvi-color-dark-tangerine-3: #ffe4a8;
+  --cvi-color-dark-tangerine-4: #ffdd92;
+  --cvi-color-dark-tangerine-5: #ffd67d;
+  --cvi-color-dark-tangerine-6: #ffcf67;
+  --cvi-color-dark-tangerine-7: #ffc951;
+  --cvi-color-dark-tangerine-8: #ffc23c;
+  --cvi-color-dark-tangerine-9: #ffbb26;
+  --cvi-color-dark-tangerine-10: #ffb511;
+  --cvi-color-dark-tangerine-11: #e8a510;
+  --cvi-color-dark-tangerine-12: #d1950e;
+  --cvi-color-dark-tangerine-13: #ba840d;
+  --cvi-color-dark-tangerine-14: #a3740b;
+  --cvi-color-dark-tangerine-15: #8c630a;
+  --cvi-color-dark-tangerine-16: #745308;
+  --cvi-color-dark-tangerine-17: #5d4207;
+  --cvi-color-dark-tangerine-18: #463205;
+  --cvi-color-dark-tangerine-19: #2f2104;
+  --cvi-color-dark-tangerine-20: #181102;
+  --cvi-color-jasper-0: #fbeded;
+  --cvi-color-jasper-1: #f7dbdb;
+  --cvi-color-jasper-2: #f4caca;
+  --cvi-color-jasper-3: #f0b8b8;
+  --cvi-color-jasper-4: #eca7a7;
+  --cvi-color-jasper-5: #e99595;
+  --cvi-color-jasper-6: #e58484;
+  --cvi-color-jasper-7: #e17272;
+  --cvi-color-jasper-8: #de6161;
+  --cvi-color-jasper-9: #da4f4f;
+  --cvi-color-jasper-10: #d73e3e;
+  --cvi-color-jasper-11: #c43939;
+  --cvi-color-jasper-12: #b03333;
+  --cvi-color-jasper-13: #9d2e2e;
+  --cvi-color-jasper-14: #892828;
+  --cvi-color-jasper-15: #762222;
+  --cvi-color-jasper-16: #621d1d;
+  --cvi-color-jasper-17: #4f1717;
+  --cvi-color-jasper-18: #3b1111;
+  --cvi-color-jasper-19: #280c0c;
+  --cvi-color-jasper-20: #140606;
+  --cvi-color-orange-0: #fff3e7;
+  --cvi-color-orange-1: #ffe7d0;
+  --cvi-color-orange-2: #ffdcb9;
+  --cvi-color-orange-3: #ffd0a2;
+  --cvi-color-orange-4: #ffc58b;
+  --cvi-color-orange-5: #ffb973;
+  --cvi-color-orange-6: #ffae5c;
+  --cvi-color-orange-7: #ffa245;
+  --cvi-color-orange-8: #ff972e;
+  --cvi-color-orange-9: #ff8b17;
+  --cvi-color-orange-10: #ff8000;
+  --cvi-color-orange-11: #e87500;
+  --cvi-color-orange-12: #d16900;
+  --cvi-color-orange-13: #ba5e00;
+  --cvi-color-orange-14: #a35200;
+  --cvi-color-orange-15: #8c4600;
+  --cvi-color-orange-16: #743b00;
+  --cvi-color-orange-17: #5d2f00;
+  --cvi-color-orange-18: #462300;
+  --cvi-color-orange-19: #2f1800;
+  --cvi-color-orange-20: #180c00;
+  --cvi-color-sapphire-blue-0: #e7f0f6;
+  --cvi-color-sapphire-blue-1: #d0e1ee;
+  --cvi-color-sapphire-blue-2: #b9d2e5;
+  --cvi-color-sapphire-blue-3: #a2c3dd;
+  --cvi-color-sapphire-blue-4: #8bb4d5;
+  --cvi-color-sapphire-blue-5: #73a5cc;
+  --cvi-color-sapphire-blue-6: #5c96c4;
+  --cvi-color-sapphire-blue-7: #4587bc;
+  --cvi-color-sapphire-blue-8: #2e78b3;
+  --cvi-color-sapphire-blue-9: #1769ab;
+  --cvi-color-sapphire-blue-10: #005aa3;
+  --cvi-color-sapphire-blue-11: #005295;
+  --cvi-color-sapphire-blue-12: #004a86;
+  --cvi-color-sapphire-blue-13: #004277;
+  --cvi-color-sapphire-blue-14: #003a68;
+  --cvi-color-sapphire-blue-15: #003259;
+  --cvi-color-sapphire-blue-16: #00294b;
+  --cvi-color-sapphire-blue-17: #00213c;
+  --cvi-color-sapphire-blue-18: #00192d;
+  --cvi-color-sapphire-blue-19: #00111e;
+  --cvi-color-sapphire-blue-20: #00090f;
+  --cvi-color-sea-green-0: #ecf4ef;
+  --cvi-color-sea-green-1: #d9e9df;
+  --cvi-color-sea-green-2: #c6ded0;
+  --cvi-color-sea-green-3: #b3d3c0;
+  --cvi-color-sea-green-4: #a0c8b0;
+  --cvi-color-sea-green-5: #8ebda1;
+  --cvi-color-sea-green-6: #7bb291;
+  --cvi-color-sea-green-7: #68a781;
+  --cvi-color-sea-green-8: #559c72;
+  --cvi-color-sea-green-9: #429162;
+  --cvi-color-sea-green-10: #308653;
+  --cvi-color-sea-green-11: #2c7a4c;
+  --cvi-color-sea-green-12: #286e44;
+  --cvi-color-sea-green-13: #23623d;
+  --cvi-color-sea-green-14: #1f5635;
+  --cvi-color-sea-green-15: #1b4a2e;
+  --cvi-color-sea-green-16: #163d26;
+  --cvi-color-sea-green-17: #12311f;
+  --cvi-color-sea-green-18: #0e2517;
+  --cvi-color-sea-green-19: #091910;
+  --cvi-color-sea-green-20: #050d08;
+  --cvi-color-white: #ffffff;
+  --cvi-color-black: #000000;
+  --cvi-color-extra-light: #f9f9f9;
+  --cvi-color-rgb-black-coral-0: 240 240 242;
+  --cvi-color-rgb-black-coral-1: 225 226 229;
+  --cvi-color-rgb-black-coral-2: 210 211 216;
+  --cvi-color-rgb-black-coral-3: 196 197 203;
+  --cvi-color-rgb-black-coral-4: 181 182 190;
+  --cvi-color-rgb-black-coral-5: 166 168 177;
+  --cvi-color-rgb-black-coral-6: 151 153 164;
+  --cvi-color-rgb-black-coral-7: 137 139 151;
+  --cvi-color-rgb-black-coral-8: 122 124 138;
+  --cvi-color-rgb-black-coral-9: 107 110 125;
+  --cvi-color-rgb-black-coral-10: 93 96 113;
+  --cvi-color-rgb-black-coral-11: 85 88 103;
+  --cvi-color-rgb-black-coral-12: 77 79 93;
+  --cvi-color-rgb-black-coral-13: 68 70 83;
+  --cvi-color-rgb-black-coral-14: 60 62 72;
+  --cvi-color-rgb-black-coral-15: 51 53 62;
+  --cvi-color-rgb-black-coral-16: 43 44 52;
+  --cvi-color-rgb-black-coral-17: 34 35 42;
+  --cvi-color-rgb-black-coral-18: 26 27 31;
+  --cvi-color-rgb-black-coral-19: 17 18 21;
+  --cvi-color-rgb-black-coral-20: 9 9 11;
+  --cvi-color-rgb-dark-tangerine-0: 255 248 233;
+  --cvi-color-rgb-dark-tangerine-1: 255 241 211;
+  --cvi-color-rgb-dark-tangerine-2: 255 234 190;
+  --cvi-color-rgb-dark-tangerine-3: 255 228 168;
+  --cvi-color-rgb-dark-tangerine-4: 255 221 146;
+  --cvi-color-rgb-dark-tangerine-5: 255 214 125;
+  --cvi-color-rgb-dark-tangerine-6: 255 207 103;
+  --cvi-color-rgb-dark-tangerine-7: 255 201 81;
+  --cvi-color-rgb-dark-tangerine-8: 255 194 60;
+  --cvi-color-rgb-dark-tangerine-9: 255 187 38;
+  --cvi-color-rgb-dark-tangerine-10: 255 181 17;
+  --cvi-color-rgb-dark-tangerine-11: 232 165 16;
+  --cvi-color-rgb-dark-tangerine-12: 209 149 14;
+  --cvi-color-rgb-dark-tangerine-13: 186 132 13;
+  --cvi-color-rgb-dark-tangerine-14: 163 116 11;
+  --cvi-color-rgb-dark-tangerine-15: 140 99 10;
+  --cvi-color-rgb-dark-tangerine-16: 116 83 8;
+  --cvi-color-rgb-dark-tangerine-17: 93 66 7;
+  --cvi-color-rgb-dark-tangerine-18: 70 50 5;
+  --cvi-color-rgb-dark-tangerine-19: 47 33 4;
+  --cvi-color-rgb-dark-tangerine-20: 24 17 2;
+  --cvi-color-rgb-jasper-0: 251 237 237;
+  --cvi-color-rgb-jasper-1: 247 219 219;
+  --cvi-color-rgb-jasper-2: 244 202 202;
+  --cvi-color-rgb-jasper-3: 240 184 184;
+  --cvi-color-rgb-jasper-4: 236 167 167;
+  --cvi-color-rgb-jasper-5: 233 149 149;
+  --cvi-color-rgb-jasper-6: 229 132 132;
+  --cvi-color-rgb-jasper-7: 225 114 114;
+  --cvi-color-rgb-jasper-8: 222 97 97;
+  --cvi-color-rgb-jasper-9: 218 79 79;
+  --cvi-color-rgb-jasper-10: 215 62 62;
+  --cvi-color-rgb-jasper-11: 196 57 57;
+  --cvi-color-rgb-jasper-12: 176 51 51;
+  --cvi-color-rgb-jasper-13: 157 46 46;
+  --cvi-color-rgb-jasper-14: 137 40 40;
+  --cvi-color-rgb-jasper-15: 118 34 34;
+  --cvi-color-rgb-jasper-16: 98 29 29;
+  --cvi-color-rgb-jasper-17: 79 23 23;
+  --cvi-color-rgb-jasper-18: 59 17 17;
+  --cvi-color-rgb-jasper-19: 40 12 12;
+  --cvi-color-rgb-jasper-20: 20 6 6;
+  --cvi-color-rgb-orange-0: 255 243 231;
+  --cvi-color-rgb-orange-1: 255 231 208;
+  --cvi-color-rgb-orange-2: 255 220 185;
+  --cvi-color-rgb-orange-3: 255 208 162;
+  --cvi-color-rgb-orange-4: 255 197 139;
+  --cvi-color-rgb-orange-5: 255 185 115;
+  --cvi-color-rgb-orange-6: 255 174 92;
+  --cvi-color-rgb-orange-7: 255 162 69;
+  --cvi-color-rgb-orange-8: 255 151 46;
+  --cvi-color-rgb-orange-9: 255 139 23;
+  --cvi-color-rgb-orange-10: 255 128 0;
+  --cvi-color-rgb-orange-11: 232 117 0;
+  --cvi-color-rgb-orange-12: 209 105 0;
+  --cvi-color-rgb-orange-13: 186 94 0;
+  --cvi-color-rgb-orange-14: 163 82 0;
+  --cvi-color-rgb-orange-15: 140 70 0;
+  --cvi-color-rgb-orange-16: 116 59 0;
+  --cvi-color-rgb-orange-17: 93 47 0;
+  --cvi-color-rgb-orange-18: 70 35 0;
+  --cvi-color-rgb-orange-19: 47 24 0;
+  --cvi-color-rgb-orange-20: 24 12 0;
+  --cvi-color-rgb-sapphire-blue-0: 231 240 246;
+  --cvi-color-rgb-sapphire-blue-1: 208 225 238;
+  --cvi-color-rgb-sapphire-blue-2: 185 210 229;
+  --cvi-color-rgb-sapphire-blue-3: 162 195 221;
+  --cvi-color-rgb-sapphire-blue-4: 139 180 213;
+  --cvi-color-rgb-sapphire-blue-5: 115 165 204;
+  --cvi-color-rgb-sapphire-blue-6: 92 150 196;
+  --cvi-color-rgb-sapphire-blue-7: 69 135 188;
+  --cvi-color-rgb-sapphire-blue-8: 46 120 179;
+  --cvi-color-rgb-sapphire-blue-9: 23 105 171;
+  --cvi-color-rgb-sapphire-blue-10: 0 90 163;
+  --cvi-color-rgb-sapphire-blue-11: 0 82 149;
+  --cvi-color-rgb-sapphire-blue-12: 0 74 134;
+  --cvi-color-rgb-sapphire-blue-13: 0 66 119;
+  --cvi-color-rgb-sapphire-blue-14: 0 58 104;
+  --cvi-color-rgb-sapphire-blue-15: 0 50 89;
+  --cvi-color-rgb-sapphire-blue-16: 0 41 75;
+  --cvi-color-rgb-sapphire-blue-17: 0 33 60;
+  --cvi-color-rgb-sapphire-blue-18: 0 25 45;
+  --cvi-color-rgb-sapphire-blue-19: 0 17 30;
+  --cvi-color-rgb-sapphire-blue-20: 0 9 15;
+  --cvi-color-rgb-sea-green-0: 236 244 239;
+  --cvi-color-rgb-sea-green-1: 217 233 223;
+  --cvi-color-rgb-sea-green-2: 198 222 208;
+  --cvi-color-rgb-sea-green-3: 179 211 192;
+  --cvi-color-rgb-sea-green-4: 160 200 176;
+  --cvi-color-rgb-sea-green-5: 142 189 161;
+  --cvi-color-rgb-sea-green-6: 123 178 145;
+  --cvi-color-rgb-sea-green-7: 104 167 129;
+  --cvi-color-rgb-sea-green-8: 85 156 114;
+  --cvi-color-rgb-sea-green-9: 66 145 98;
+  --cvi-color-rgb-sea-green-10: 48 134 83;
+  --cvi-color-rgb-sea-green-11: 44 122 76;
+  --cvi-color-rgb-sea-green-12: 40 110 68;
+  --cvi-color-rgb-sea-green-13: 35 98 61;
+  --cvi-color-rgb-sea-green-14: 31 86 53;
+  --cvi-color-rgb-sea-green-15: 27 74 46;
+  --cvi-color-rgb-sea-green-16: 22 61 38;
+  --cvi-color-rgb-sea-green-17: 18 49 31;
+  --cvi-color-rgb-sea-green-18: 14 37 23;
+  --cvi-color-rgb-sea-green-19: 9 25 16;
+  --cvi-color-rgb-sea-green-20: 5 13 8;
+  --cvi-color-rgb-white: 255 255 255;
+  --cvi-color-rgb-black: 0 0 0;
+  --cvi-color-rgb-extra-light: 249 249 249;
+  --cvi-color-focus: var(--cvi-color-sapphire-blue-10);
+}
+
+/* stylelint-disable-next-line value-keyword-case */
+
+:root {
+  --cvi-font-family-base: $cvi-font-family-base;
+  --cvi-font-size-50: 10px;
+  --cvi-font-size-70: 12px;
+  --cvi-font-size-80: 14px;
+  --cvi-font-size-100: 16px;
+  --cvi-font-size-200: 18px;
+  --cvi-font-size-220: 20px;
+  --cvi-font-size-250: 24px;
+  --cvi-font-size-300: 28px;
+  --cvi-font-size-350: 32px;
+  --cvi-font-size-400: 36px;
+  --cvi-font-size-500: 48px;
+  --cvi-line-height-100: 1;
+  --cvi-line-height-500: 1.5;
+  --cvi-font-weight-alpha: 300;
+  --cvi-font-weight-beta: 400;
+  --cvi-font-weight-gamma: 500;
+  --cvi-font-weight-delta: 700;
+}
+
 /* stylelint-disable selector-max-type, selector-class-pattern, selector-combinator-disallowed-list, selector-no-qualifying-type */
 
 /* stylelint-enable selector-max-type, selector-class-pattern, selector-combinator-disallowed-list, selector-no-qualifying-type */
@@ -1015,7 +1311,7 @@ h2 {
 }
 
 .cvi-button--appearance-secondary .cvi-button__button:focus {
-  border-color: var(--cvi-color-sapphire-blue-10);
+  border-color: var(--cvi-color-focus);
 }
 
 .cvi-button--appearance-secondary .cvi-button__button:disabled {
@@ -1037,7 +1333,7 @@ h2 {
 }
 
 .cvi-button--appearance-text .cvi-button__button:focus {
-  border: var(--cvi-border-width) solid var(--cvi-color-sapphire-blue-10);
+  border: var(--cvi-border-focus);
 }
 
 .cvi-button--appearance-text .cvi-button__button:disabled {
@@ -1094,7 +1390,7 @@ h2 {
 }
 
 .cvi-textfield__text-control:focus {
-  outline: 2px solid var(--cvi-color-sapphire-blue-10);
+  outline: var(--cvi-border-focus);
   border-color: transparent;
 }
 
@@ -1118,92 +1414,6 @@ h2 {
   justify-content: center;
   fill: var(--cvi-color-sapphire-blue-10);
   pointer-events: none;
-}
-
-.cvi-textfield-with-cdk {
-  --comment: "A form text control with Angular Material CDK autosize styles";
-  --comment: "A form text control";
-  display: block;
-}
-
-.cvi-textfield-with-cdk--type-single-line .cvi-textfield-with-cdk__text-control {
-  min-width: var(--cvi-textfield--single-line--min-width, 200px);
-  max-width: var(--cvi-textfield--single-line--max-width, 300px);
-  width: 100%;
-  height: 40px;
-}
-
-.cvi-textfield-with-cdk--type-multiple-lines {
-  display: flex;
-  flex-direction: column;
-}
-
-.cvi-textfield-with-cdk--type-multiple-lines .cvi-textfield-with-cdk__text-control {
-  width: 100%;
-  min-width: 200px;
-  max-width: var(--cvi-textfield--multiple-lines--max-width, 670px);
-  padding: var(--cvi-spacing-paldiski);
-  resize: vertical;
-}
-
-.cvi-textfield-with-cdk--has-suffix-icon {
-  position: relative;
-}
-
-.cvi-textfield-with-cdk--has-suffix-icon .cvi-textfield-with-cdk__text-control {
-  padding-inline-end: calc(var(--cvi-spacing-elva) * 2 + 16px);
-}
-
-.cvi-textfield-with-cdk__text-control {
-  background-color: var(--cvi-color-white);
-  border: 1px solid var(--cvi-color-black-coral-5);
-  border-radius: var(--cvi-radius-s);
-  font-size: var(--cvi-font-size-100);
-  padding-inline-start: var(--cvi-spacing-paldiski);
-}
-
-.cvi-textfield-with-cdk__text-control:focus {
-  outline: 2px solid var(--cvi-color-sapphire-blue-10);
-  border-color: transparent;
-}
-
-.cvi-textfield-with-cdk--is-disabled .cvi-textfield-with-cdk__text-control {
-  background-color: var(--cvi-color-black-coral-0);
-  border: 1px solid var(--cvi-color-black-coral-5);
-}
-
-.cvi-textfield-with-cdk--no-resize .cvi-textfield-with-cdk__text-control {
-  resize: none;
-}
-
-.cvi-textfield-with-cdk__suffix-icon-wrapper {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-end: 0;
-  padding-inline-end: var(--cvi-spacing-elva);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  fill: var(--cvi-color-sapphire-blue-10);
-  pointer-events: none;
-}
-
-.cvi-textfield-with-cdk textarea.cdk-textarea-autosize {
-  resize: none;
-}
-
-.cvi-textfield-with-cdk textarea.cdk-textarea-autosize-measuring {
-  padding: 2px 0 !important;
-  box-sizing: content-box !important;
-  height: auto !important;
-  overflow: hidden !important;
-}
-
-.cvi-textfield-with-cdk textarea.cdk-textarea-autosize-measuring-firefox {
-  padding: 2px 0 !important;
-  box-sizing: content-box !important;
-  height: 0 !important;
 }
 
 .cvi-form-item {
@@ -2044,6 +2254,8 @@ h2 {
 }
 
 .cvi-select {
+  --comment: "A single choice combobox";
+  --value-box-height: 30px;
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -2053,19 +2265,38 @@ h2 {
   visibility: hidden;
 }
 
+.cvi-select.is-input-hidden .cvi-select__input {
+  color: transparent;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+
+.cvi-select.search-has-focus .cvi-select__value {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  margin: -1px;
+  padding: 0;
+  border: none;
+  white-space: nowrap;
+}
+
 .has-value .cvi-select__container {
   background-color: var(--cvi-color-white);
 }
 
-.has-value .cvi-select__container.background-disabled {
+.has-value.background-disabled .cvi-select__container {
   background-color: var(--cvi-color-black-coral-0);
 }
 
-.has-value .cvi-select__input-container {
+.has-value.background-disabled .cvi-select__input-container {
   visibility: hidden;
 }
 
-.cvi-select.open.has-value .cvi-select__input-container {
+.cvi-select.open.has-value.background-disabled .cvi-select__input-container {
   visibility: visible;
 }
 
@@ -2075,6 +2306,11 @@ h2 {
 
 .cvi-select.disabled .cvi-select__container {
   background-color: var(--cvi-color-black-coral-0);
+}
+
+.cvi-select.search-has-focus .cvi-select__container {
+  border-color: transparent;
+  outline: var(--cvi-border-focus);
 }
 
 .cvi-select__container {
@@ -2093,6 +2329,18 @@ h2 {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
+  min-width: 0;
+  line-height: var(--value-box-height);
+}
+
+.cvi-select__placeholder,
+.cvi-select__value {
+  max-width: 100%;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
 }
 
 .cvi-select__placeholder {
@@ -2102,14 +2350,14 @@ h2 {
 .cvi-select__input-container {
   position: absolute;
   width: 100%;
-  left: 0;
+  left: 1px;
   padding-left: var(--cvi-spacing-paldiski);
   padding-right: 40px;
 }
 
 .cvi-select__input {
   box-sizing: content-box;
-  background: none;
+  background-color: transparent;
   border: none;
   box-shadow: none;
   outline: none;
@@ -2117,16 +2365,19 @@ h2 {
   cursor: default;
   width: 100%;
   font-size: inherit;
+  font-family: inherit;
+  transition: none;
+  line-height: var(--value-box-height);
 }
 
 .cvi-select__icon-wrapper {
   width: 30px;
   height: 30px;
   display: flex;
-  cursor: pointer;
   position: relative;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .cvi-select__icon {
@@ -2143,7 +2394,10 @@ h2 {
   fill: var(--cvi-color-sapphire-blue-10);
 }
 
-.cvi-select__dropdown {
+.cvi-dropdown-popup {
+  --comment: "A popup for an list-based dropdown";
+  --bg-color-focused: var(--cvi-color-sapphire-blue-8);
+  --bg-color-current: var(--cvi-color-sapphire-blue-10);
   position: absolute;
   width: 100%;
   background-color: var(--cvi-color-white);
@@ -2155,13 +2409,27 @@ h2 {
   overflow-y: auto;
 }
 
-.cvi-select__dropdown-item {
+.cvi-dropdown-popup__dropdown-item {
   padding: var(--cvi-spacing-rapla) var(--cvi-spacing-elva);
   cursor: pointer;
   color: var(--cvi-color-black-coral-18);
 }
 
-.cvi-select__dropdown-item:hover {
+.cvi-dropdown-popup__dropdown-item.is-current {
+  background-color: var(--bg-color-current);
+  color: var(--cvi-color-white);
+}
+
+.cvi-dropdown-popup__dropdown-item.is-current:hover {
+  background-color: var(--bg-color-focused);
+}
+
+.cvi-dropdown-popup__dropdown-item.is-focused, .cvi-dropdown-popup__dropdown-item.is-focused:hover {
+  background-color: var(--bg-color-focused);
+  color: var(--cvi-color-white);
+}
+
+.cvi-dropdown-popup__dropdown-item:hover {
   background-color: var(--cvi-color-sapphire-blue-0);
 }
 
@@ -2197,17 +2465,17 @@ h2 {
   z-index: var(--arrow-configurable-index, 12);
 }
 
-.cvi-tab-group {
-  list-style-type: none;
+.cvi-tab-group__list {
   display: flex;
   margin-bottom: -1px;
+  list-style-type: none;
 }
 
 .cvi-tab-group__tab-btn {
-  border: none;
   padding: var(--cvi-spacing-haapsalu);
   font-size: var(--cvi-font-size-100);
   color: var(--cvi-color-sapphire-blue-20);
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
@@ -2216,8 +2484,8 @@ h2 {
   border-top-left-radius: var(--cvi-radius-s);
   border-top-right-radius: var(--cvi-radius-s);
   color: var(--cvi-color-sapphire-blue-10);
-  border: 1px solid var(--cvi-color-black-coral-2);
-  border-bottom: none;
+  border-color: var(--cvi-color-black-coral-2);
+  border-bottom-color: transparent;
 }
 
 .cvi-tab-group__tab-content {
