@@ -972,6 +972,12 @@ h2 {
   margin-bottom: var(--cvi-spacing-elva);
 }
 
+@keyframes cvi-loading-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 :root {
   --cvi-color-black-coral-0: #f0f0f2;
   --cvi-color-black-coral-1: #e1e2e5;
@@ -2389,7 +2395,7 @@ h2 {
   vertical-align: middle;
   width: 15px;
   height: 15px;
-  animation: loading-spinner 0.75s linear infinite;
+  animation: cvi-loading-spinner 0.75s linear infinite;
   border: 2px solid var(--cvi-color-sapphire-blue-10);
   border-right-color: transparent;
   border-radius: 50%;
